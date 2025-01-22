@@ -1,0 +1,22 @@
+class A:
+    def action(self):
+        print("Action from class A")
+
+class B(A):
+    def action(self):
+        print("Action from class B")
+        super().action()
+
+class C(A):
+    def action(self):
+        print("Action from class C")
+        super().action()
+
+class D(B, C):
+    def action(self):
+        print("Action from class D")
+        super().action()
+
+if __name__ == "__main__":
+    d = D()
+    d.action()
